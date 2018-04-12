@@ -1,4 +1,15 @@
+$(document).ready(function(){
 
+    if (
+	document.fullscreenEnabled || 
+	document.webkitFullscreenEnabled || 
+	document.mozFullScreenEnabled ||
+	document.msFullscreenEnabled
+) {
+    alert("fullscreen ready");
+}
+    
+});
 
 
 $(".theman").mouseenter(function(){
