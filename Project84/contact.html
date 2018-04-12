@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chicken Fud</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#6B9CFF" />
+
+    <!--  JQuery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/afac56adce.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="CSS/contact.css">
+</head>
+
+<body>
+
+    <nav class="nav" id="myTopNav">
+
+        <ul id="nav-list">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.gitshowcase.com/adamthewizard">GitShowcase</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li id="close-btn" class="nav-item"><i class="fa fa-times" aria-hidden="true"> </i> Close
+            </li>
+        </ul>
+
+    </nav>
+
+    <span id="burger-btn"><i class="fa fa-th" aria-hidden="true"></i> <span class="burger-btn-title">Contact</span></span>
+
+    <a href="https://www.twitter.com/adamthewizard/"><span id="twitter-icon"><i class="fa fa-twitter" aria-hidden="true"></i></span></a>
+
+    <div id="container">
+
+        
+        <form method="POST" action="https://formspree.io/mr_adam_man@hotmail.com">
+            <img class="main-image" src="IMAGES/test.png">
+            <h2 class="shoot">Say Hello...</h2>
+            <input class="name-input input" type="text" name="name" placeholder="Name:">
+            <input class="email-input input" type="email" name="email" placeholder="Your email:">
+            <input class="subject-input input" type="text" name="subject" placeholder="Subject:">
+            <textarea class="message-input input" name="message" placeholder="Your message:"></textarea>
+            <button class="submit-btn" type="submit">Send</button>
+        </form>
+
+    </div>
+    <script src="JS/contact.js"></script>
+
+</body>
+
+</html>

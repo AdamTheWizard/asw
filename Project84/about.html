@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chicken Fud</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#6B9CFF" />
+
+    <!--  JQuery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/afac56adce.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="CSS/about.css">
+
+</head>
+
+<body>
+
+    <nav class="nav" id="myTopNav">
+
+        <ul id="nav-list">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.gitshowcase.com/adamthewizard">GitShowcase</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li id="close-btn" class="nav-item"><i class="fa fa-times" aria-hidden="true"> </i> Close
+            </li>
+        </ul>
+
+    </nav>
+
+    <span id="burger-btn"><i class="fa fa-th" aria-hidden="true"></i> <span class="burger-btn-title">About</span></span>
+
+    <a href="https://www.twitter.com/adamthewizard/"><span id="twitter-icon"><i class="fa fa-twitter" aria-hidden="true"></i></span></a>
+    <div id="container">
+
+        <div id="text-div">
+            <div id="about-text">
+                <p id="typeWriter">
+                    <h3 class='about-title title1'>Hey, I'm Adam...</h3>I design things on computers and paper and do my best to find creative ways to match the two together. I spend a lot of time writing JavaScript and I always try to use my offline skills to enhance the work I do online.
+                    <h3 class='about-title title2'>What have I been up to?</h3>I spent most of 2017 working on my programming and design skills. This included a LOT of of online courses from <a class='blue' href='https://www.freecodecamp.com'> FreeCodeCamp</a> to <a class='blue' href='https://www.sololearn.com'>SoloLearn</a> but I have no plans on slowing down. 2018 will be another year of progress and development!
+                <span class="hide-mobile">
+                    <h3 class='about-title title1'>What do I use online?</h3><i class='fa-about fa fa-html5' aria-hidden='true'></i> <i class='fa-about fa fa-css3' aria-hidden='true'></i> <i class='fa-about fa fa-github-alt' aria-hidden='true'></i> <i class='fa-about fa fa-wordpress' aria-hidden='true'></i> <i class='fa-about fa fa-meetup' aria-hidden='true'></i> <i class='fa-about fa fa-stack-overflow' aria-hidden='true'></i> <i class='fa-about fa fa-free-code-camp' aria-hidden='true'></i>
+                </span>
+                </p>
+            </div>
+        </div>
+        <div id="img-div">
+            <img id="main-img" src="IMAGES/test.png">
+        </div>
+
+    </div>
+    <script>
+                $(window).ready(function() {
+
+                    $("#about-text").animate({right:"-20px",opacity:"1"}, 1000);
+                    $("#main-img").animate({left:"-120px",opacity:"1"}, 1000, function(){
+                        $("#about-text").animate({right:"0"},200);
+                        $("#main-img").animate({left:"-50px"},200);
+                    });
+                    
+                });
+        $("#burger-btn").click(function() {
+
+            $(this).animate({
+                opacity: "0"
+            }, 200);
+            $(".nav").slideToggle("slow");
+
+            $("#twitter-icon").animate({
+                opacity: "0"
+            }, 200);
+
+        });
+
+        $("#close-btn").click(function() {
+
+            $(".nav").slideToggle("slow", function() {
+
+                $("#burger-btn").animate({
+                    opacity: "1"
+                }, 200);
+
+                $("#twitter-icon").animate({
+                    opacity: "1"
+                }, 200);
+            })
+
+        })
+    </script>
+
+</body>
+
+</html>

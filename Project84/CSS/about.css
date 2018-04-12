@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#text-div {
+    width:50vw;
+    float:left;
+}
+
+#about-text {
+    z-index: 9999;
+    text-align: left;
+    width: 40vw;
+    margin:100px auto;
+    font-size: 150%;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 100;
+    color: #111;
+    position: relative;
+    right: 100vw;
+    opacity:0;
+}
+#img-div {
+    display:block;
+    float:left;
+    width:50vw;
+    text-align:center;
+    margin-top:100px;
+}
+
+
+#main-img {
+    width:500px !important;
+    position:relative;
+    left:100vw;
+    opacity:0;
+}
+
+.about-title {
+    border: none;
+    margin: 0.25em;
+    font-weight:800;
+}
+
+.title1 {
+    color: #61dafb;
+    margin-top: 1em;
+}
+
+.title2 {
+    color: #61dafb;
+}
+
+.blue {
+    color: #61dafb;
+}
+
+.fa-about {
+    font-size: 150%;
+    padding: 0.55em .5em;
+}
+
+
+.nav {
+    width: 100%;
+    display: none;
+}
+
+#nav-list {
+    margin: 0;
+    padding: 0px 0;
+}
+
+.nav-item {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 150%;
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #61dafb;
+    background-color:#111;
+}
+
+#burger-btn {
+    margin: 0;
+    padding: 10px;
+    font-size: 250%;
+    color: #111;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.burger-btn-title {
+    color: #111;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#twitter-icon {
+    float: right;
+    padding: .25em;
+    font-size: 200%;
+    color: #111;
+}
+
+#close-btn {
+    cursor:pointer;
+}
+/* mobile Styles */
+@media only screen and (max-width: 765px) {
+    
+    #about-text {
+        font-size:100%;
+        margin:10px auto;
+    }
+    
+    .hide-mobile {
+        display:none;
+    }
+}
