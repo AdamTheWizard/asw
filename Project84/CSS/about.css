@@ -1,3 +1,32 @@
+*:-webkit-full-screen {
+    color:inherit;
+    background-color:inherit;
+}
+
+*:-moz-full-screen {
+    color:inherit;
+    background-color:inherit;
+}
+
+*:-ms-fullscreen {
+    color:inherit;
+    background-color:inherit;
+}
+
+*:fullscreen {
+    color:inherit;
+    background-color:inherit;
+}
+
+
+
+
+
+
+
+
+
+
 body {
     margin: 0;
     padding: 0;
