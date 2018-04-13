@@ -1,0 +1,135 @@
+h1 {
+  text-align: center;
+  font-family: sans-serif;
+  color: #333;
+}
+.accordion {
+  width: 100%;
+  max-width: 1080px;
+  height: 250px;
+  overflow: hidden;
+  margin: 50px auto;
+}
+.accordion ul {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  margin: 0;
+  padding: 0;
+}
+.accordion ul li {
+  display: table-cell;
+  vertical-align: bottom;
+  position: relative;
+  width: 16.666%;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all 500ms ease;
+}
+.accordion ul li div {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+.accordion ul li div a {
+  display: block;
+  height: 250px;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  vertical-align: bottom;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  color: #fff;
+  text-decoration: none;
+  font-family: sans-serif;
+  transition: all 200ms ease;
+}
+.accordion ul li div a * {
+  opacity: 0;
+  margin: 0;
+  width: 100%;
+  text-overflow: ellipsis;
+  position: relative;
+  z-index: 5;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-transform: translateX(-20px);
+  transform: translateX(-20px);
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+.accordion ul li div a h2 {
+  font-family: sans-serif;
+  text-overflow: clip;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  top: 160px;
+}
+.accordion ul li div a p {
+  top: 160px;
+  font-size: 13.5px;
+}
+.accordion ul li:nth-child(1) {
+  background-image: url('http://livingwaterlutheran.us/wp-content/uploads/2015/03/helping-hands.jpg');
+}
+.accordion ul li:nth-child(2) {
+  background-image: url('https://www.bart.gov/sites/default/files/better-bart/banner-involved.jpg');
+}
+.accordion ul li:nth-child(3) {
+  background-image: url("http://eagletranslation.com/en/wp-content/uploads/2016/11/translater-interpreter-1200x330-1110x330.jpg");
+}
+.accordion ul li:nth-child(4) {
+  background-image: url('https://media.mnn.com/assets/images/2016/12/give-to-charity.jpg.653x0_q80_crop-smart.jpg');
+}
+.accordion ul li:nth-child(5) {
+  background-image: url('https://s-i.huffpost.com/gen/1965807/images/n-MAN-WOMAN-WRITING-628x314.jpg');
+}
+.accordion ul li:nth-child(6) {
+  background-image: url('https://images.unsplash.com/photo-1495653797063-114787b77b23?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e68c6f6e2122173e57aaed6d56fd4510&auto=format&fit=crop&w=1950&q=80');
+}
+.accordion ul:hover li {
+  width: 8%;
+}
+.accordion ul:hover li:hover {
+  width: 60%;
+}
+.accordion ul:hover li:hover a {
+  background: rgba(0, 0, 0, .4);
+}
+.accordion ul:hover li:hover a * {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+@media screen and (max-width: 600px) {
+  body {
+    margin: 0;
+  }
+  .accordion {
+    height: auto;
+  }
+  .accordion ul li, .accordion ul:hover li, .accordion ul li:hover, .accordion ul:hover li:hover {
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+.about {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #666;
+}
+.about a {
+  color: blue;
+  text-decoration: none;
+}
+.about a:hover {
+  text-decoration: underline;
+}
