@@ -43,11 +43,26 @@ body {
     color: #69C6DD;
     border-color: #69C6DD;
 }
+
+.sound-text {
+    display:block;
+    color:#fff;
+    text-align:center;
+    margin-top:25vh;
+    text-transform: uppercase;
+    cursor:pointer;
+}
+.soundOn {
+    color:greenyellow;
+}
+.soundOff {
+    color:red;
+}
 .headphones-text {
     color:#fff;
     text-align:center;
     font-size:80%;
-    margin-top:150px;
+    margin-top:100px;
     text-transform: uppercase;
 }
 .fa-headphones {
@@ -65,6 +80,10 @@ body {
 }
 .blue {
     color:#69C6DD;
+}
+
+audio {
+    opacity:;
 }
 
 /* Mobile styles */

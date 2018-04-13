@@ -16,17 +16,27 @@ function createOne(){
  //Fadesout initial screen and starts loading randoms until there are 1000 elements - then calls fadeToBlack() and stops calling createOne() by claering the setInterval() 
 const beginBtn = document.getElementById("begin");
 beginBtn.onclick = function(){
-  $("#container").animate({opacity:"0"}, 1000, function(){
+    $("audio").get(0).play();
+    $("#container").animate({opacity:"0"}, 1000, function(){
     $("#container").empty();
     $("#container").animate({opacity:"1"},1000);
   });
+    setTimeout(function(){
+      
+  
   var fastCreate = setInterval(function(){
   createOne();
     if ($("#container .randomEle").length === 1000){
       fadeToBlack();
         window.clearInterval(fastCreate);
     }
-}, 10);
+}, 10);  
+    }, 5000);
+    
+    
+    
+    
+    
 }
 //animations for after crazy adding elements section
 function fadeToBlack(){ 
@@ -43,8 +53,8 @@ function fadeToBlack(){
                 $("#main-text").animate({opacity:"0"},3000,function(){
                   $("#main-text").html("<a class='hashtag' src='https://www.thecalmzone.net/get-involved/donate/'>#Project84</a>");
                   $("#main-text").animate({opacity:"1"},5000,function(){
-                    $("#main-text").animate({color:"#69C6DD",marginTop:"10vh"},2500, function(){
-                        $("#stats-box").fadeIn(2500);
+                    $("#main-text").animate({color:"#69C6DD",marginTop:"10vh"},500, function(){
+                        $("#stats-box").fadeIn(1000);
                     });
                   });
                 }); 
@@ -57,6 +67,7 @@ function fadeToBlack(){
   });
 }
 
+
 var instance = new TypeIt('#begin', {
     cursor: false,
     breakLines: false,
@@ -68,5 +79,26 @@ new TypeIt('#begin', {
     speed: 100,
     breakLines: false,
     autoStart: false
+});
+
+$(".sound-text").click(function(){
+    
+    if ($(".sound-text").hasClass("notClicked")){
+        $(this).removeClass("notClicked");
+        $(this).animate({opacity:"0"},200,function(){
+            $(this).html("<a class='sound-text'>Toggle sound <i class=' soundOff fas fa-volume-off'></i></a>");
+            $(this).animate({opacity:"1"});
+            $("audio").get(0).muted = true;
+        });
+        
+    } else {
+        $(this).animate({opacity:"0"},200,function(){
+            $(this).html("<a class='sound-text notClicked'>Toggle sound <i class=' soundOn fas fa-volume-up'></i></a>");
+            $(this).animate({opacity:"1"});
+            $("audio").get(0).muted = false;
+        });
+        
+    }
+    
 });
 //This was made by @AdamTheWizard to raise awareness around male suicide in the U.K. feel free to use anything but please let me know where it has been used as I'm a curious cat! *peace sign*
