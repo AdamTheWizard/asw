@@ -13,7 +13,7 @@ function createOne(){
   newEl.style.marginLeft = Math.floor(Math.random() * (97 - 1)) + "vw";
   newEl.style.color = "rgb(" + 0 + ", " + 0 + ", " + Math.floor(Math.random()*(255-50+1)+50) + ")";
 }
- //Fadesout initial screen and starts loading randoms until there are 1000 elements - then calls fadeToBlack() and stops calling createOne() by claering the setInterval() 
+ //Fadesout initial screen and starts loading randoms until there are 1000 elements - then calls fadeToBlack() and stops calling createOne() by clearing the setInterval() 
 const beginBtn = document.getElementById("begin");
 beginBtn.onclick = function(){
     $("audio").get(0).play();
@@ -48,7 +48,7 @@ function fadeToBlack(){
           $("#main-text").html("84 men will die by suicide every week until the end of the year.");
           $("#main-text").animate({opacity:"1"},5000,function(){
             $("#main-text").animate({opacity:"0"},3000,function(){
-              $("#main-text").html("It's time we made a change.");
+              $("#main-text").html("LET'S CHANGE THIS.");
               $("#main-text").animate({opacity:"1"},5000,function(){
                 $("#main-text").animate({opacity:"0"},3000,function(){
                   $("#main-text").html("<a class='hashtag' src='https://www.thecalmzone.net/get-involved/donate/'>#ProjectAdam</a>");
@@ -56,8 +56,15 @@ function fadeToBlack(){
                     $("#main-text").animate({color:"#69C6DD",marginTop:"5vh"},1500, function(){
                         $("#stats-box").fadeIn(1000, function(){
                             $(".accordion").fadeIn(1000);
+                            $(".hover-tut").fadeIn(2000, function(){
+                                $(".down-arrow").animate({marginLeft:"350px",marginRight:"350px"},1000,function(){
+                                    $(".down-arrow").animate({marginLeft:"10px",marginRight:"10px"}, 1000);
+                                });
+                            });
                             $(".goneButNot").fadeIn(1500);
-                            $(".names").fadeIn(2500);
+                            $(".names").fadeIn(2500, function(){
+                                rotateNames();
+                            });
                         });
                     });
                   });
@@ -106,20 +113,30 @@ $(".sound-text").click(function(){
     
 });
 
-const names = ["William Stuart Adamson, 43", ", "];
+const names = ["", "Adam Wall, 26", "Johnny Alen, 34", "Chicken Fud, 9", "William Stuart Adamson, 43"];
 rotateNames();
 function rotateNames(){
     
     let namesIndex = 0;
     setInterval(function(){
         
-        $(".names").html(names[namesIndex]);
-        namesIndex++;
-    },3000);
+        if (namesIndex < names.length){
+            $(".names").animate({opacity:"0"},1000, function(){
+                $(".names").html(names[namesIndex]);
+                $(".names").animate({opacity:"1"}, 1000);
+            });
+           
+           namesIndex++; 
+        } else {
+            namesIndex = 0;
+        }
+        
+        
+    },5000);
     
     
     
 }
 
 
-//This was made by @AdamTheWizard to raise awareness around male suicide in the U.K. feel free to use anything but please let me know where it has been used as I'm a curious cat! *peace sign*
+//This was made by @AdamTheWizard to raise awareness around male suicide in the U.K. feel free to use anything but please let me know where it has been used solely because I'm a curious cat! *peace sign*

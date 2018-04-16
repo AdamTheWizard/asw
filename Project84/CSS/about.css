@@ -49,19 +49,15 @@ a {
     border: none;
     margin: 0.25em;
     font-weight:800;
+    color: #61dafb;
 }
 
 .title1 {
-    color: #61dafb;
     margin-top: 1em;
 }
 
-.title2 {
-    color: #61dafb;
-}
-
 .blue {
-    color: #61dafb;
+    
 }
 
 .fa-about {
@@ -118,11 +114,25 @@ a {
     cursor:pointer;
 }
 /* mobile Styles */
-@media only screen and (max-width: 765px) {
+@media only screen and (max-width: 600px) {
     
+    #text-div {
+        z-index: 9999;
+        width:100%;
+        position:fixed;
+        background-color:rgba(255,255,255,0.9);
+        height:100vh;
+    }
     #about-text {
-        font-size:100%;
-        margin:10px auto;
+        font-weight:800;
+        text-align:center;
+        width:80%;
+        font-size:120%;
+        margin:40px auto;
+    }
+    .about-title {
+        color:#111;
+        text-transform:uppercase;
     }
     
     .hide-mobile {

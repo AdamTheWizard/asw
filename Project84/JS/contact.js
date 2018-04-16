@@ -20,7 +20,22 @@ $("#burger-btn").click(function() {
         $(window).ready(function() {
             $("#container").animate({
                 opacity: "1"
-            }, 3000, function(){
-                $("#Telephone").css("border", "1px solid red !important");
+            }, 1000, function(){
+                $(".shoot").slideToggle(500, function(){
+                    $(".shoot").css("display", "block");
+                    $(".name-input").slideToggle(500, function(){
+                        $(".name-input").css("display", "block");
+                        $(".email-input").slideToggle(500, function(){
+                            $(".email-input").css("display", "block");
+                            $(".subject-input").slideToggle(500, function(){
+                                $(".subject-input").css("display", "block");
+                                $(".message-input").slideToggle(500, function(){
+                                    $(".message-input").css("display", "block");
+                                    $(".submit-btn").fadeIn(3000);
+                                });
+                            })
+                        })
+                    });
+                });
             });
         });

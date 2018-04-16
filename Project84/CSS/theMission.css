@@ -87,14 +87,34 @@ body {
     text-align:center;
     color:#fff;
     text-transform: uppercase;
-    display:;
+    display:none;
 }
 .names {
     z-index: 999;
     color:#69C6DD;
     text-align:center;
     text-transform: uppercase;
-    display:;
+    display:none;
+}
+
+.hover-tut {
+    color:#fff;
+    text-align:center;
+    display:none;
+    margin-bottom:0;
+}
+.hover-tut:hover {
+    color:#69C6DD;
+    transition:1s;
+}
+.down-arrow {
+    color:#69C6DD;
+    margin: 0;
+    margin-left:10px;
+    margin-right:10px;
+}
+.down-arrow:hover {
+    color:#fff;
 }
 
 /* Mobile styles */
