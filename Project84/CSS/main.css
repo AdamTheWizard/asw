@@ -15,10 +15,12 @@ div {
 
 .white-triangle {
     background: url('') center / cover no-repeat;
+    -webkit-transition: 1s;
     transition: 1s;
 }
 
 .white-triangle:hover {
+    -webkit-transition: 1s;
     transition: 1s;
 }
 
@@ -28,10 +30,12 @@ div {
     clip-path: polygon(100vw 0, 0% 100vh, 100vw 100vh);
     background: url('') top / cover no-repeat;
     background-color: #111;
+    -webkit-transition: 1s;
     transition: 1s;
 }
 
 .black-triangle:hover {
+    -webkit-transition: 1s;
     transition: 1s;
 }
 
