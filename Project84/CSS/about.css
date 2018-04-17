@@ -130,6 +130,9 @@ a {
         font-size:120%;
         margin:40px auto;
     }
+    #main-img {
+        width:100%;
+    }
     .about-title {
         color:#111;
         text-transform:uppercase;
