@@ -113,7 +113,7 @@ $(".sound-text").click(function(){
     
 });
 
-const names = ["", "Adam Wall, 26", "Johnny Alen, 34", "Chicken Fud, 9", "William Stuart Adamson, 43"];
+const names = ["", "Christopher Acland, 30", "Stuart Adamson, 43", "David Bairstow, 46", "Paul Bhattacharjee, 53", "Adrian Borland, 41", "Donald Cammell, 62", "Tim Carter, 40", "Ian Curtis, 23", "Justin Fashanu, 37", "Anton Furst, 47", "Jon Lee, 43", "Christopher Hardman, 24", "Billy Mackenzie, 39", "Alexander McQueen, 40", "Terry Newton, 31", "David Rappaport, 38", "Dale Roberts, 24", "Carl Sargeant, 49", "David Scarboro, 20", "Tony Scott, 68", "Gary Speed, 42", "Mark Speight, 42", "David Sutch 58"];
 rotateNames();
 function rotateNames(){
     
