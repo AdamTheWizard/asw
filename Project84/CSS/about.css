@@ -131,7 +131,7 @@ a {
         margin:40px auto;
     }
     #main-img {
-        width:100vw;
+        max-width:100vw;
     }
     .about-title {
         color:#111;
