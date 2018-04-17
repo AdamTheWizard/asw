@@ -121,6 +121,7 @@ div {
     font-size: 200%;
     z-index: 9999;
     border: none;
+    outline:none;
 }
 
 @media only screen and (max-width: 600px) {
