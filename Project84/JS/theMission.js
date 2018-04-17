@@ -52,6 +52,7 @@ function fadeToBlack(){
               $("#main-text").animate({opacity:"1"},5000,function(){
                 $("#main-text").animate({opacity:"0"},3000,function(){
                   $("#main-text").html("<a class='hashtag' src='https://www.thecalmzone.net/get-involved/donate/'>#ProjectAdam</a>");
+                    $("#main-text").addClass("mobile-margin");
                   $("#main-text").animate({opacity:"1"},5000,function(){
                     $("#main-text").animate({color:"#69C6DD",marginTop:"5vh"},1500, function(){
                         $("#stats-box").fadeIn(1000, function(){

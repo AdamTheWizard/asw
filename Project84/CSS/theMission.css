@@ -124,4 +124,11 @@ body {
     #main-text {
         margin-top: 10vh;
     }
+    
+    #stats-box {
+        width:90vw;
+    }
+    .mobile-margin {
+        padding:0;
+    }
 }
