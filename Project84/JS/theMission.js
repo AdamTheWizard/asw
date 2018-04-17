@@ -26,7 +26,7 @@ beginBtn.onclick = function(){
   
   var fastCreate = setInterval(function(){
   createOne();
-    if ($("#container .randomEle").length === 1000){
+    if ($("#container .randomEle").length === 10){
       fadeToBlack();
         window.clearInterval(fastCreate);
     }
@@ -46,22 +46,25 @@ function fadeToBlack(){
       $("#main-text").fadeIn(2500, function(){
         $("#main-text").animate({opacity:"0"},3000,function(){
           $("#main-text").html("84 men will die by suicide every week until the end of the year.");
-          $("#main-text").animate({opacity:"1"},5000,function(){
+          $("#main-text").animate({opacity:"1"},1000,function(){
             $("#main-text").animate({opacity:"0"},3000,function(){
               $("#main-text").html("LET'S CHANGE THIS.");
-              $("#main-text").animate({opacity:"1"},5000,function(){
+              $("#main-text").animate({opacity:"1"},1000,function(){
                 $("#main-text").animate({opacity:"0"},3000,function(){
                   $("#main-text").html("<a class='hashtag' src='https://www.thecalmzone.net/get-involved/donate/'>#ProjectAdam</a>");
-                    $("#main-text").addClass("mobile-margin");
-                  $("#main-text").animate({opacity:"1"},5000,function(){
+                    $("#main-text").css("padding-left", "0");
+                  $("#main-text").animate({opacity:"1"},1000,function(){
                     $("#main-text").animate({color:"#69C6DD",marginTop:"5vh"},1500, function(){
                         $("#stats-box").fadeIn(1000, function(){
-                            $(".accordion").fadeIn(1000);
-                            $(".hover-tut").fadeIn(2000, function(){
-                                $(".down-arrow").animate({marginLeft:"350px",marginRight:"350px"},1000,function(){
-                                    $(".down-arrow").animate({marginLeft:"10px",marginRight:"10px"}, 1000);
+                            if ($(window).width() > 500){
+                                $(".accordion").fadeIn(1000);
+                                $(".hover-tut").fadeIn(2000, function(){
+                                    $(".down-arrow").animate({marginLeft:"350px",marginRight:"350px"},1000,function(){
+                                        $(".down-arrow").animate({marginLeft:"10px",marginRight:"10px"}, 1000);
+                                    });
                                 });
-                            });
+                            }
+                            
                             $(".goneButNot").fadeIn(1500);
                             $(".names").fadeIn(2500, function(){
                                 rotateNames();
