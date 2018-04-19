@@ -129,7 +129,7 @@ function rotateNames(){
     setInterval(function(){
         
         if (namesIndex < names.length){
-            $(".names").animate({opacity:"0"},3000, function()
+            $(".names").animate({opacity:"0"},3000, function(){
                 $(".names").html(names[namesIndex]);
                 $(".names").animate({opacity:"1"}, 3000);
             });
