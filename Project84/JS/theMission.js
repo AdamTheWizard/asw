@@ -44,7 +44,6 @@ function fadeToBlack(){
   $("body").animate({backgroundColor:"#000"},1, function(){
     $("body").animate({backgroundColor:"#111"},2500, function(){
       $("#main-text").fadeIn(2500, function(){
-          $("#main-text").css("display", "inline-block");
         $("#main-text").animate({opacity:"0"},1000,function(){
           $("#main-text").html("84 men will die by suicide every week until the end of the year.");
           $("#main-text").animate({opacity:"1"},1000,function(){
