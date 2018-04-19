@@ -117,6 +117,24 @@ body {
 .down-arrow:hover {
     color:#fff;
 }
+.mobile-btns-div {
+    text-align:center;
+    margin-top:-30px;
+    margin-bottom:30px;
+}
+.btn {
+    color:#fff;
+    font-weight:100;
+    display:block;
+    margin:10px auto;
+    background-color:rgba(0,0,0,0);
+    border: 1px solid #69C6DD;
+    border-radius:5px;
+    padding:10px;
+    text-transform: uppercase;
+    display:none;
+    opacity:0;
+}
 
 /* Mobile styles */
 
@@ -127,8 +145,5 @@ body {
     
     #stats-box {
         width:90vw;
-    }
-    .mobile-margin {
-        padding:0;
     }
 }

@@ -44,15 +44,14 @@ function fadeToBlack(){
   $("body").animate({backgroundColor:"#000"},1, function(){
     $("body").animate({backgroundColor:"#111"},2500, function(){
       $("#main-text").fadeIn(2500, function(){
-        $("#main-text").animate({opacity:"0"},3000,function(){
+        $("#main-text").animate({opacity:"0"},1000,function(){
           $("#main-text").html("84 men will die by suicide every week until the end of the year.");
           $("#main-text").animate({opacity:"1"},1000,function(){
-            $("#main-text").animate({opacity:"0"},3000,function(){
+            $("#main-text").animate({opacity:"0"},1000,function(){
               $("#main-text").html("LET'S CHANGE THIS.");
               $("#main-text").animate({opacity:"1"},1000,function(){
-                $("#main-text").animate({opacity:"0"},3000,function(){
+                $("#main-text").animate({opacity:"0"},1000,function(){
                   $("#main-text").html("<a class='hashtag' src='https://www.thecalmzone.net/get-involved/donate/'>#ProjectAdam</a>");
-                    $("#main-text").css("padding-left", "0");
                   $("#main-text").animate({opacity:"1"},1000,function(){
                     $("#main-text").animate({color:"#69C6DD",marginTop:"5vh"},1500, function(){
                         $("#stats-box").fadeIn(1000, function(){
@@ -64,11 +63,15 @@ function fadeToBlack(){
                                     });
                                 });
                             }
-                            
-                            $(".goneButNot").fadeIn(1500);
-                            $(".names").fadeIn(2500, function(){
+                            if ($(window).width() < 500){
+                               $(".btn").css("display", "block");
+                                $(".btn").animate({opacity:"1"}, 2000); 
+                            }
+                                                        
+                            $(".goneButNot").fadeIn(10000);
+                            $(".names").fadeIn(11000, function(){
                                 rotateNames();
-                            });
+                            });                            
                         });
                     });
                   });
@@ -136,7 +139,7 @@ function rotateNames(){
         }
         
         
-    },5000);
+    },10000);
     
     
     
