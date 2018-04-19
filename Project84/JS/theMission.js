@@ -52,7 +52,7 @@ function fadeToBlack(){
               $("#main-text").html("LET'S CHANGE THIS.");
               $("#main-text").animate({opacity:"1"},1000,function(){
                 $("#main-text").animate({opacity:"0"},1000,function(){
-                  $("#main-text").html("<a class='hashtag' src='https://www.thecalmzone.net/get-involved/donate/'>#ProjectAdam</a>");
+                  $("#main-text").html("<a class='hashtag' src='https://www.thecalmzone.net/'>#Project84</a>");
                   $("#main-text").animate({opacity:"1"},1000,function(){
                     $("#main-text").animate({color:"#69C6DD",marginTop:"5vh"},1500, function(){
                         $("#stats-box").fadeIn(1000, function(){
@@ -129,9 +129,9 @@ function rotateNames(){
     setInterval(function(){
         
         if (namesIndex < names.length){
-            $(".names").animate({opacity:"0"},1000, function(){
+            $(".names").animate({opacity:"0"},3000, function()
                 $(".names").html(names[namesIndex]);
-                $(".names").animate({opacity:"1"}, 1000);
+                $(".names").animate({opacity:"1"}, 3000);
             });
            
            namesIndex++; 
@@ -140,7 +140,7 @@ function rotateNames(){
         }
         
         
-    },10000);
+    },12000);
     
     
     
