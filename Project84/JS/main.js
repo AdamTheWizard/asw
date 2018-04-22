@@ -40,6 +40,7 @@ var theplan = document.querySelector(".theplan");
 var theman = document.querySelector("theman");
 
 
+
 $(".toggle-arrows-btn").click(function(){
     
     

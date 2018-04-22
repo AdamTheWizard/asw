@@ -88,6 +88,7 @@ body {
     color:#fff;
     text-transform: uppercase;
     display:none;
+    margin-top:60px;
 }
 .names {
     z-index: 999;
