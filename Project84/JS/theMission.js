@@ -17,16 +17,16 @@ function createOne(){
 const beginBtn = document.getElementById("begin");
 beginBtn.onclick = function(){
     $("audio").get(0).play();
-    $("#container").animate({opacity:"0"}, 1000, function(){
+    $("#container").animate({opacity:"0"}, 5000, function(){
     $("#container").empty();
-    $("#container").animate({opacity:"1"},1000);
+    $("#container").animate({opacity:"1"},5000);
   });
     setTimeout(function(){
       
   
   var fastCreate = setInterval(function(){
   createOne();
-    if ($("#container .randomEle").length === 1000){
+    if ($("#container .randomEle").length === 1500){
       fadeToBlack();
         window.clearInterval(fastCreate);
     }
@@ -88,7 +88,21 @@ function fadeToBlack(){
                             $(".goneButNot").fadeIn(10000);
                             $(".names").fadeIn(11000, function(){
                                 rotateNames();
-                            });                            
+                                var volume = 1;
+                                
+                                var fadeVolume = setInterval(function(){
+                                    if (volume > 0){
+                                        var vid = document.querySelector("audio");
+                                        vid.volume = volume;
+                                        volume -= 0.1;
+                                    } else if (volume <= 0){
+                                        window.clearInterval(fadeVolume);
+                                    }
+                                    
+                                }, 750);
+                                
+                                
+                            });
                         });
                     });
                   });
