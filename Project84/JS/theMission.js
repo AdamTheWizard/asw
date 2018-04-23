@@ -49,14 +49,24 @@ function fadeToBlack(){
           $("#main-text").animate({opacity:"1"},3000,function(){
             $("#main-text").animate({opacity:"0"},5000,function(){
               $("#main-text").html("LET'S CHANGE THIS.");
-              $("#main-text").animate({fontSize:"280%"},10, function(){
-                  $("main-text").animate({fontSize:"300%"}, 10, function(){
-                     $("#main-text").animate({fontSize:"280%"},10,function(){
-                         $("main-text").animate({fontSize:"300%"},10);
-                     }) ;
-                  });
-              });
               $("#main-text").animate({opacity:"1"},3000,function(){
+                  //Distort effect
+                  $("#main-text").animate({fontSize:"250%"},10);
+                  $("#main-text").animate({fontSize:"300%"},10);
+                  $("#main-text").animate({fontSize:"250%"},10);
+                  $("#main-text").animate({fontSize:"300%"},10);
+                  $("#main-text").animate({fontSize:"250%"},10);
+                  $("#main-text").animate({fontSize:"300%"},10);
+                  $("#main-text").animate({fontSize:"250%"},10);
+                  $("#main-text").animate({fontSize:"300%"},10);
+                  $("#main-text").animate({fontSize:"250%"},10);
+                  $("#main-text").animate({fontSize:"300%"},10);
+                  $("#main-text").animate({fontSize:"250%"},10);
+                  $("#main-text").animate({fontSize:"300%"},10);
+                  $("#main-text").animate({fontSize:"250%"},10);
+                  $("#main-text").animate({fontSize:"300%"},10);
+                  $("#main-text").animate({fontSize:"250%"},10);
+                  $("#main-text").animate({fontSize:"300%"},10);
                 $("#main-text").animate({opacity:"0"},5000,function(){
                   $("#main-text").html("<a class='hashtag' src='https://www.thecalmzone.net/'>#Project91</a>");
                   $("#main-text").animate({opacity:"1"},3000,function(){
@@ -96,7 +106,6 @@ function fadeToBlack(){
 var instance = new TypeIt('#begin', {
     cursor: false,
     breakLines: false,
-    //-- Other options...
 });
 new TypeIt('#begin', {
     strings: ["Start", "dechrau", "tús", "tòiseachadh", "start"],
