@@ -84,3 +84,26 @@ $(".toggle-arrows-btn").click(function(){
         });  
     };
 });
+
+$(document).ready(function(){
+    resizeText();
+});
+$(window).resize(function(){
+    resizeText();
+});
+
+function resizeText(){
+    if ($(window).width() < 500){
+        
+        $(".themanP").html("<span class='icon icon-mars blue'><i class='fas fa-mars'></i></span><br>If you're reading this, you're probably curious about me or my website. I'd like you to know everything. It's just dificult to know where to start. I suppose telling you my name is Adam is a good way to begin. Maybe, telling you I'm a 26 year old Web developer from London and a dad to one awesome 9 year old would be a good folow up to that? It would probably do me well to tell you I'm not a fan of writing about myself and my writing style needs improving but I assume that's obvious by now. I really would like you to know more but for now I'll just say, I'm a man with a plan and my plan is to help. If you can help me do this, follow the link at the top to get in touch.");
+        
+        $(".theplanP").html("<span class='icon blue'><i class='fas fa-hands-helping'></i></span><br>If you'd like to read more about the man who made this website, click the toggle button at the top, otherwise, this is where I explain what the ultimate goal is. The Everest I'm trying to climb. The proverbial bull who's horns I am trying to firmly grip. I would love to tell you the whole plan and all of its wonderous intricacies but to be honest, I'm still trying to figure that bit out. Currently, the plan is to help combat the shockingly high levels of suicide in men in the U.K, I'm just not sure of the best way I can contribute to such an impactful problem yet. I would like to be involved with this problem directly and if you have any ideas or ways that I can start making a difference, get in touch.");
+    } else {
+        $(".themanP").html("<span class='icon icon-mars blue'><i class='fas fa-mars'></i></span><br>If you're reading this, you're probably curious about me or my website. I'd like you to know everything. It's just dificult to know where to start. I suppose telling you my name is Adam is a good way to begin. Maybe, telling you I'm a 26 year old Web developer from London and a dad to one awesome 9 year old would be a good folow up to that? It would probably do me well to tell you I'm not a fan of writing about myself and my writing style needs improving but I assume that's obvious by now. I really would like you to know more but for now I'll just say, I'm a man with a plan and my plan is to help. Follow the link at the bottom to get in touch.")
+        
+        $(".theplanP").html("<span class='icon blue'><i class='fas fa-hands-helping'></i></span><br>If you'd like to read more about the man who made this website, hover over the link at the bottom, otherwise, this is where I explain what the ultimate goal is. The Everest I'm trying to climb. The proverbial bull who's horns I am trying to firmly grip. I would love to tell you the whole plan and all of its wonderous intricacies but to be honest, I'm still trying to figure that bit out. Currently, the plan is to help combat the shockingly high levels of suicide in men in the U.K, I'm just not sure of the best way I can contribute to such an impactful problem yet. I would like to be involved with this problem directly and if you have any ideas or ways that I can start making a difference, get in touch.");
+    }
+}
+    
+    
+    
