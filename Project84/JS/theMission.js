@@ -143,7 +143,7 @@ function fadeToBlack(){
                   $("#main-text").animate({fontSize:"250%"},10);
                   $("#main-text").animate({fontSize:"300%"},10);
                 $("#main-text").animate({opacity:"0"},5000,function(){
-                  $("#main-text").html("<a class='hashtag' src='https://www.thecalmzone.net/'>#Project91</a>");
+                  $("#main-text").html("<a class='hashtag' src='https://www.thecalmzone.net/'>#StopTheStigma</a>");
                   $("#main-text").animate({opacity:"1"},3000,function(){
                     $("#main-text").animate({color:"#69C6DD",marginTop:"5vh"},1500, function(){
                         $("#stats-box").fadeIn(1000, function(){
