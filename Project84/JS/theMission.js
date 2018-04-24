@@ -32,7 +32,7 @@ beginBtn.onclick = function(){
             window.clearInterval(fastCreate);
           }   
       } else {
-          if ($("#container .randomEle").length === 1500){
+          if ($("#container .randomEle").length === 1300){
       fadeToBlack();
         window.clearInterval(fastCreate);
     }
