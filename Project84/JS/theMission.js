@@ -26,10 +26,18 @@ beginBtn.onclick = function(){
   
   var fastCreate = setInterval(function(){
   createOne();
-    if ($("#container .randomEle").length === 1500){
+      if ($(window).width() < 500){
+          if ($("#container .randomEle").length === 750){
+            fadeToBlack();
+            window.clearInterval(fastCreate);
+          }   
+      } else {
+          if ($("#container .randomEle").length === 1500){
       fadeToBlack();
         window.clearInterval(fastCreate);
     }
+      }
+    
 }, 10);  
     }, 5000);
     
@@ -38,6 +46,73 @@ beginBtn.onclick = function(){
     
     
 }
+$(".skip").click(function(){
+    skipToBlack();
+})
+
+function skipToBlack(){
+    $("#container").remove();
+    $(".skip").css("display", "none");
+    $("body").animate({backgroundColor:"#000"},1, function(){
+        $("body").animate({backgroundColor:"#111"},500, function(){
+            $("#main-text").html("<a class='hashtag' src='https://www.thecalmzone.net/'>#Project91</a>");
+            $("#main-text").fadeIn(500);
+            $("#main-text").animate({opacity:"1"},1500,function(){
+                $("#main-text").animate({color:"#69C6DD",marginTop:"5vh"},750, function(){
+                    $("#stats-box").fadeIn(500, function(){
+                        if ($(window).width() > 500){
+                            $(".accordion").fadeIn(1000);
+                            $(".hover-tut").fadeIn(2000, function(){
+                                $(".down-arrow").animate({marginLeft:"350px",marginRight:"350px"},1000,function(){
+                                    $(".down-arrow").animate({marginLeft:"10px",marginRight:"10px"}, 1000);
+                                });
+                            });
+                        }
+                        if ($(window).width() < 500){
+                            $(".btn").css("display", "block");
+                            $(".btn").animate({opacity:"1"}, 2000); 
+                        }
+                        $(".goneButNot").fadeIn(5000);
+                        $(".names").fadeIn(5500, function(){
+                            rotateNames();
+                            var volume = 1;
+                            var fadeVolume = setInterval(function(){
+                                if (volume > 0){
+                                    var vid = document.querySelector("audio");
+                                    vid.volume = volume;
+                                    volume -= 0.1;
+                                } else if (volume <= 0){
+                                        window.clearInterval(fadeVolume);
+                                }
+                                    
+                            }, 750);
+                        });
+                    });
+                });
+            });
+        }); 
+    });
+}
+
+
+
+// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
+// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
+// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
+// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
+// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
+// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
+// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
+// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
+// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
+// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
+// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
+// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
+// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
+// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
+
+
+
 //animations for after crazy adding elements section
 function fadeToBlack(){ 
   $("#container").remove();
@@ -80,6 +155,9 @@ function fadeToBlack(){
                                     });
                                 });
                             }
+                            $(".skip").animate({opacity:"0"},1500, function(){
+                                $(".skip").css("display", "none");
+                            });
                             if ($(window).width() < 500){
                                $(".btn").css("display", "block");
                                 $(".btn").animate({opacity:"1"}, 2000); 
