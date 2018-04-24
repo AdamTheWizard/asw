@@ -55,7 +55,7 @@ function skipToBlack(){
     $(".skip").css("display", "none");
     $("body").animate({backgroundColor:"#000"},1, function(){
         $("body").animate({backgroundColor:"#111"},500, function(){
-            $("#main-text").html("<a class='hashtag' src='https://www.thecalmzone.net/'>#Project91</a>");
+            $("#main-text").html("<a class='hashtag' src='https://www.thecalmzone.net/'>#StopTheStigma</a>");
             $("#main-text").fadeIn(500);
             $("#main-text").animate({opacity:"1"},1500,function(){
                 $("#main-text").animate({color:"#69C6DD",marginTop:"5vh"},750, function(){
