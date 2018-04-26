@@ -29,7 +29,7 @@ beginBtn.onclick = function(){
         setTimeout(function(){
             fadeToBlack();
             window.clearInterval(fastCreate);
-        }, 15000);
+        }, 15200);
         
     }, 5000);
         
