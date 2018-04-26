@@ -21,31 +21,20 @@ beginBtn.onclick = function(){
     $("#container").empty();
     $("#container").animate({opacity:"1"},5000);
   });
+
     setTimeout(function(){
       
-  
-  var fastCreate = setInterval(function(){
-  createOne();
-      if ($(window).width() < 500){
-          if ($("#container .randomEle").length === 750){
+        var fastCreate = setInterval(createOne, 10);
+        
+        setTimeout(function(){
             fadeToBlack();
             window.clearInterval(fastCreate);
-          }   
-      } else {
-          if ($("#container .randomEle").length === 1000){
-      fadeToBlack();
-        window.clearInterval(fastCreate);
-    }
-      }
-    
-}, 10);  
+        }, 15000);
+        
     }, 5000);
-    
-    
-    
-    
-    
+        
 }
+
 $(".skip").click(function(){
     skipToBlack();
 })
