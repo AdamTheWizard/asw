@@ -83,25 +83,6 @@ function skipToBlack(){
     });
 }
 
-
-
-// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
-// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
-// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
-// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
-// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
-// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
-// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
-// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
-// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
-// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
-// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
-// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
-// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
-// skipToBlack() FUNCTION TODO TODO TODO TODO TODO TODO
-
-
-
 //animations for after crazy adding elements section
 function fadeToBlack(){ 
   $("#container").remove();
