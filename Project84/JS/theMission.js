@@ -44,7 +44,7 @@ function skipToBlack(){
     $(".skip").css("display", "none");
     $("body").animate({backgroundColor:"#000"},1, function(){
         $("body").animate({backgroundColor:"#111"},500, function(){
-            $("#main-text").html("<a class='hashtag' src='https://www.thecalmzone.net/'>#StopTheStigma</a>");
+            $("#main-text").html("<a class='hashtag' src='https://www.thecalmzone.net/'>#Project84</a>");
             $("#main-text").fadeIn(500);
             $("#main-text").animate({opacity:"1"},1500,function(){
                 $("#main-text").animate({color:"#69C6DD",marginTop:"5vh"},750, function(){
@@ -90,7 +90,7 @@ function fadeToBlack(){
     $("body").animate({backgroundColor:"#111"},2500, function(){
       $("#main-text").fadeIn(2500, function(){
         $("#main-text").animate({opacity:"0"},5000,function(){
-          $("#main-text").html("84 men will die by suicide every week until the end of the year.");
+          $("#main-text").html("84 men will die by suicide every week.");
           $("#main-text").animate({opacity:"1"},3000,function(){
             $("#main-text").animate({opacity:"0"},5000,function(){
               $("#main-text").html("LET'S CHANGE THIS.");
@@ -113,7 +113,7 @@ function fadeToBlack(){
                   $("#main-text").animate({fontSize:"250%"},10);
                   $("#main-text").animate({fontSize:"300%"},10);
                 $("#main-text").animate({opacity:"0"},5000,function(){
-                  $("#main-text").html("<a class='hashtag' src='https://www.thecalmzone.net/'>#StopTheStigma</a>");
+                  $("#main-text").html("<a class='hashtag' src='https://www.thecalmzone.net/'>#Project84</a>");
                   $("#main-text").animate({opacity:"1"},3000,function(){
                     $("#main-text").animate({color:"#69C6DD",marginTop:"5vh"},1500, function(){
                         $("#stats-box").fadeIn(1000, function(){
