@@ -170,6 +170,7 @@ body {
     opacity:0;
     transition: opacity 2s;
     display:none;
+    z-index: -999;
 }
 .creditListItem {
     padding:10px;

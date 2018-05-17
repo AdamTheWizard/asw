@@ -230,10 +230,12 @@ creditButton.onclick = function(){
     if (creditsList.style.opacity == 0){
         creditsList.style.opacity = "1";
         creditsList.style.display = "block";
+        creditsList.style.zIndex = "999";
         creditButton.innerHTML = "Hide";
     } else {
         creditsList.style.opacity = "0";
         creditsList.style.display = "none";
+        creditsList.style.zIndex = "-999";
         creditButton.innerHTML = "Credits";
     }
     
