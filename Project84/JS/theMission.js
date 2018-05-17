@@ -229,9 +229,11 @@ const creditsList = document.querySelector(".creditsList");
 creditButton.onclick = function(){
     if (creditsList.style.opacity == 0){
         creditsList.style.opacity = "1";
+        creditsList.style.display = "block";
         creditButton.innerHTML = "Hide";
     } else {
         creditsList.style.opacity = "0";
+        creditsList.style.display = "none";
         creditButton.innerHTML = "Credits";
     }
     
