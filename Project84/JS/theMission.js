@@ -17,6 +17,7 @@ function createOne(){
 const beginBtn = document.getElementById("begin");
 beginBtn.onclick = function(){
     $("audio").get(0).play();
+    $(".creditsButton").animate({opacity:"0.3"},1000);
     $("#container").animate({opacity:"0"}, 5000, function(){
     $("#container").empty();
     $("#container").animate({opacity:"1"},5000);
@@ -59,10 +60,11 @@ function skipToBlack(){
                         }
                         if ($(window).width() < 500){
                             $(".btn").css("display", "block");
-                            $(".btn").animate({opacity:"1"}, 2000); 
+                            $(".btn").animate({opacity:"1"}, 2000);
                         }
                         $(".goneButNot").fadeIn(5000);
                         $(".names").fadeIn(5500, function(){
+                            $(".creditsButton").animate({opacity:"1"},1000);
                             rotateNames();
                             var volume = 1;
                             var fadeVolume = setInterval(function(){
@@ -219,7 +221,19 @@ function rotateNames(){
         
     },12000);
     
-    
+}
+
+const creditButton = document.querySelector(".creditsButton");
+const creditsList = document.querySelector(".creditsList");
+
+creditButton.onclick = function(){
+    if (creditsList.style.opacity == 0){
+        creditsList.style.opacity = "1";
+        creditButton.innerHTML = "Hide";
+    } else {
+        creditsList.style.opacity = "0";
+        creditButton.innerHTML = "Credits";
+    }
     
 }
 
