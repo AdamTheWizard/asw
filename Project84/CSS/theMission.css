@@ -156,7 +156,7 @@ body {
     transition:1s;
 }
 .creditsContainer {
-    position:absolute;
+    position:fixed;
     bottom:0;
     right:0;
 }
@@ -181,7 +181,7 @@ body {
     background:none;
     border:none;
     text-decoration: underline;
-    position:absolute;
+    position:fixed;
     bottom:0;
     right:0;
     cursor:pointer;
