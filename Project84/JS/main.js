@@ -1,6 +1,6 @@
 if ($(window).width() > 600) {
-        $('.theman').unbind('mouseenter mouseleave');
-        $('.theplan').unbind('mouseenter mouseleave');
+        $('*').unbind('mouseenter mouseleave');
+        $('*').off('mouseenter mouseleave');
 }
 
 
