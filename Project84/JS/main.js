@@ -1,13 +1,13 @@
+    if ($(window).width() > 600) {
 
 $(".theman").mouseenter(function(){
-    if ($(window).width() > 600) {
         $(".black-triangle").animate({backgroundColor:"#fff"}, 100);
         $(".theman").animate({color:"#111"}, 100);
         $(".themanP").fadeIn(100);
         $(".smallman").animate({opacity:"1"},100);
         $(".white-triangle").animate({backgroundColor:"#111"}, 100);
         $(".theplan").animate({color:"#fff"}, 100);
-    }
+    
 }); 
 $(".theman").mouseleave(function(){
     $(".black-triangle").animate({backgroundColor:"#111"}, 100);
@@ -37,6 +37,8 @@ $(".theplan").mouseleave(function(){
     $(".black-triangle").animate({backgroundColor:"#111"}, 100);
     $(".theman").animate({color:"#fff"}, 100);
 });
+        
+    }
 
 var theplan = document.querySelector(".theplan");
 var theman = document.querySelector("theman");
