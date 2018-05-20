@@ -1,4 +1,8 @@
-    if ($(window).width() > 600) {
+if ($(window).width() > 600) {
+        $('.theman').off('mouseenter mouseleave');
+        $('.theplan').off('mouseenter mouseleave');
+}
+
 
 $(".theman").mouseenter(function(){
         $(".black-triangle").animate({backgroundColor:"#fff"}, 100);
@@ -37,11 +41,10 @@ $(".theplan").mouseleave(function(){
     $(".black-triangle").animate({backgroundColor:"#111"}, 100);
     $(".theman").animate({color:"#fff"}, 100);
 });
-        
-    }
+       
 
 var theplan = document.querySelector(".theplan");
-var theman = document.querySelector("theman");
+var theman = document.querySelector(".theman");
 
 
 
