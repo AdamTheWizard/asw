@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 //switch colours with the two triangle divs and nested text on hover
 $(".theman").mouseenter(function () {
@@ -16,8 +15,6 @@ $(".theman").mouseleave(function () {
     $(".black-triangle").animate({ backgroundColor: "#111" }, 100);
     $(".theman").animate({ color: "#fff" }, 100);
 =======
-=======
->>>>>>> e6496f888d1d1fbe25fa102846512005e83328b3
 if ($(window).width() > 600) {
         $('*').unbind('mouseenter mouseleave');
         $('*').off('mouseenter mouseleave');
@@ -65,14 +62,11 @@ $(".theplan").mouseleave(function () {
     $(".theman").animate({ color: "#fff" }, 100);
 });
        
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 // media queries switch the layout and add a toggle button
 // toggle button switches between displaying two divs
 $(".toggle-arrows-btn").click(function () {
-=======
->>>>>>> e6496f888d1d1fbe25fa102846512005e83328b3
 
 // show 'The man' section and hide 'The Plan' section if the toggle button is clicked
     if ($(".themanP").css("display") == "none") {
@@ -81,9 +75,6 @@ $(".toggle-arrows-btn").click(function () {
 =======
 var theplan = document.querySelector(".theplan");
 var theman = document.querySelector(".theman");
-<<<<<<< HEAD
->>>>>>> e6496f888d1d1fbe25fa102846512005e83328b3
-=======
 >>>>>>> e6496f888d1d1fbe25fa102846512005e83328b3
 
             $(".black-triangle").css("clip-path", " inherit");
