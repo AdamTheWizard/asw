@@ -1,5 +1,7 @@
 
-// Creates a P element and randomizes location, shade of blue, size, message and sticks it in the container
+/* Creates a P element and randomizes location, shade of blue, size and adds
+   a text from the array 'thoughts'. The p element is then displayed in the container
+*/
 function createOne(){
   let thoughts = ["What do I do next?", "Is this forever?", "Where should I go?", "What can I do?", "How can I get through this?", "Is this only me?", "Is it just me?", "Where do I get out?", "How do I know it's right?", "Would anyone care?", "Yes?", "No?", "Am I meant to know?", "How could I possible know?", "When will I be ok?", "Will anyone miss me?", "Should I do it?", "Will it hurt?", "Is this for the best?", "Why won't it stop?", "Has anyone been here before?", "Should I tell anyone?", "Will they think I'm crazy?", "Am I crazy?", "Can anyone hear me?", "Is anyone out there?", "Has everyone given up on me?", "Should I give up?", "Can I take this?"]; 
   const container = document.querySelector("#container");
@@ -13,15 +15,18 @@ function createOne(){
   newEl.style.marginLeft = Math.floor(Math.random() * (97 - 1)) + "vw";
   newEl.style.color = "rgb(" + 0 + ", " + 0 + ", " + Math.floor(Math.random()*(255-50+1)+50) + ")";
 }
- //Fadesout initial screen and starts loading randoms until there are 1000 elements - then calls fadeToBlack() and stops calling createOne() by clearing the setInterval() 
+
+ /* Fadeout initial screen and starts adding random elements to the page by starting fastCreate and stopping
+    when the music reaches the correct point - then fastCreate is cleared and fadeToBlack() is called
+ */
 const beginBtn = document.getElementById("begin");
 beginBtn.onclick = function(){
     $("audio").get(0).play();
     $(".creditsButton").animate({opacity:"0.3"},1000);
     $("#container").animate({opacity:"0"}, 5000, function(){
-    $("#container").empty();
-    $("#container").animate({opacity:"1"},5000);
-  });
+      $("#container").empty();
+      $("#container").animate({opacity:"1"},5000);
+    });
 
     setTimeout(function(){
       
@@ -40,6 +45,10 @@ $(".skip").click(function(){
     skipToBlack();
 })
 
+/* Empties container with random elements and skips to the last scene of the presentation before
+   fading in the final view and fading out the music
+*/
+// On final view, names and dates are loaded onto the bottom of the page by calling rotateNames().
 function skipToBlack(){
     $("#container").remove();
     $(".skip").css("display", "none");
@@ -85,7 +94,10 @@ function skipToBlack(){
     });
 }
 
-//animations for after crazy adding elements section
+/* Empties container with random elements and rotates through different impact text. before fading in
+   the final view and fading out the music
+*/
+// On final view, names and dates are loaded onto the bottom of the page by calling rotateNames().
 function fadeToBlack(){ 
   $("#container").remove();
   $("body").animate({backgroundColor:"#000"},1, function(){
@@ -166,7 +178,9 @@ function fadeToBlack(){
   });
 }
 
-
+/* TypeIt, a JavaScript typewriter effect utility was used to give a typewriter effect to the 'Start' button.
+   It types rotates languages and starts in English and rotates through Welsh, Irish and Scottish Gaelic.
+*/
 var instance = new TypeIt('#begin', {
     cursor: false,
     breakLines: false,
@@ -179,6 +193,9 @@ new TypeIt('#begin', {
     autoStart: false
 });
 
+/* toggles the sound muted or unmuted before playing the presentation. This is done by adding a removing the initial class of notClicked
+   if the user wants it unmuted. Muted by default.
+*/
 $(".sound-text").click(function(){
     
     if ($(".sound-text").hasClass("notClicked")){
@@ -200,6 +217,9 @@ $(".sound-text").click(function(){
     
 });
 
+/* names is an array of men who have died from suicide. rotateNames() is called on the last view and it displays the names
+   onscreen and rotates through them.
+*/
 const names = ["", "Christopher Acland, 30", "Stuart Adamson, 43", "David Bairstow, 46", "Paul Bhattacharjee, 53", "Adrian Borland, 41", "Donald Cammell, 62", "Tim Carter, 40", "Ian Curtis, 23", "Justin Fashanu, 37", "Anton Furst, 47", "Jon Lee, 43", "Christopher Hardman, 24", "Billy Mackenzie, 39", "Alexander McQueen, 40", "Terry Newton, 31", "David Rappaport, 38", "Dale Roberts, 24", "Carl Sargeant, 49", "David Scarboro, 20", "Tony Scott, 68", "Gary Speed, 42", "Mark Speight, 42", "David Sutch 58"];
 rotateNames();
 function rotateNames(){
@@ -223,6 +243,7 @@ function rotateNames(){
     
 }
 
+// Hides and displays credits box onclick.
 const creditButton = document.querySelector(".creditsButton");
 const creditsList = document.querySelector(".creditsList");
 
