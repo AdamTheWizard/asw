@@ -17,6 +17,8 @@ $("#burger-btn").click(function() {
                 }, 200);
             })
         });
+
+// Animates contact form onto page.
         $(window).ready(function() {
             $("#container").animate({
                 opacity: "1"
