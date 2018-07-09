@@ -194,7 +194,13 @@ new TypeIt('#begin', {
 });
 
 /* toggles the sound muted or unmuted before playing the presentation. This is done by adding a removing the initial class of notClicked
-   if the user wants it unmuted. Muted by default.
+   if the user wants it unmuted. Unmuted by default. 
+    
+    Switch to unmuted 
+    TODO TODO TODO TODO TODO TODO
+    TODO TODO TODO TODO TODO TODO
+    TODO TODO TODO TODO TODO TODO
+    TODO TODO TODO TODO TODO TODO
 */
 $(".sound-text").click(function(){
     
