@@ -1,3 +1,5 @@
+
+// Fades alternate triangle to the one being hovered. Display text and icon on the hovered triangle. 
 $(".theman").mouseenter(function(){
     $(".black-triangle").animate({backgroundColor:"#fff"}, 100);
     $(".theman").animate({color:"#111"}, 100);
@@ -17,6 +19,7 @@ $(".theman").mouseleave(function(){
     $(".theplan").animate({color:"#111"}, 100);
 });
 
+// Fades alternate triangle to the one being hovered. Display text abd icon on the hovered triangle. 
 $(".theplan").mouseenter(function(){
     $(".white-triangle").animate({backgroundColor:"#111"}, 100);
     $(".theplan").animate({color:"#fff"}, 100);
@@ -40,7 +43,9 @@ var theplan = document.querySelector(".theplan");
 var theman = document.querySelector("theman");
 
 
-
+/* Toggle button is shown using CSS media queries. The landing page changes layout and the triangles are consolidated into
+   one full screen div that displays one paragraph at a time. The toggle button switches the paragraphs.
+*/
 $(".toggle-arrows-btn").click(function(){
     
     
@@ -92,6 +97,13 @@ $(window).resize(function(){
     resizeText();
 });
 
+/* text explaining the toggle button. 
+   Remove explanation?
+   TODO TODO TODO TODO TODO TODO
+   TODO TODO TODO TODO TODO TODO
+   TODO TODO TODO TODO TODO TODO
+   TODO TODO TODO TODO TODO TODO
+*/
 function resizeText(){
     if ($(window).width() < 500){
         
